@@ -1,0 +1,43 @@
+<h1>Taco Stand</h1>
+
+<h2>Menu:</h2>
+<ul>
+    {{#each tacos}}
+    {{#unless devoured}}
+    <li>
+        {{taco_name}}
+        <button class="change-eat" data-id="{{id}}" data-neweat="true">
+            Devour it!
+        </button>
+        {{!-- <button class="delete-taco" data-id="{{this.id}}">Delete</button> --}}
+    </li>
+    {{/unless}}
+    {{/each}}
+</ul>
+
+<h2>Adiós, tacos!</h2>
+
+<ul>
+    {{#each tacos}}
+    {{#if devoured}}
+    <li>
+        {{taco_name}}
+        <button class="change-eat" data-id="{{id}}" data-neweat="false">
+            Add to menu
+        </button>
+        {{!-- <button class="delete-taco" data-id="{{this.id}}">Delete</button> --}}
+    </li>
+    {{/if}}
+    {{/each}}
+</ul>
+
+<h2>Add a Taco</h2>
+<form class="create-form">
+
+    <div class="form-group">
+        <label for="taco">Type of taco:</label>
+        <input type="text" id="taco" name="name">
+    </div>
+
+    <button type="submit">Add Taco</button>
+</form>
