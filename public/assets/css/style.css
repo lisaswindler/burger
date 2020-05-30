@@ -1,7 +1,6 @@
 li {
   padding: 5px;
   margin: 5px;
-  background: #faebd7;
 }
 
 .label {
@@ -11,7 +10,6 @@ li {
 .create-update-form {
   padding: 5px;
   margin: 5px;
-  background: aqua;
 }
 
 .form-group {
