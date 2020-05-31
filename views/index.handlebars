@@ -1,57 +1,70 @@
 <div class="container-fluid px-0">
 
-<h1 class="text-center">Taco Stand</h1>
+    <h1 class="text-center p-3">Taco Stand</h1>
 
-<div class="row text-center">
+    <div class="row text-center">
 
-<div class="col-6 p-5">
-<h2 class="text-center">Menu</h2>
+        <div class="col-6 p-5">
+            <h2 class="text-center">Hola, tacos!</h2>
 
-<div class="pt-3">
-    {{#each tacos}}
-    {{#unless devoured}}
-    <p>
-        {{taco_name}}
-        <button class="change-eat" data-id="{{id}}" data-neweat="true">
-            Devour it!
-        </button>
-   </p>
-    {{/unless}}
-    {{/each}}
-</div>
+            <div class="pt-3">
+                {{#each tacos}}
+                {{#unless devoured}}
+                <p>
+                    {{taco_name}}
+                    <button class="change-eat btn ml-3" data-id="{{id}}" data-neweat="true">
+                        Devour it
+                    </button>
+                </p>
+                {{/unless}}
+                {{/each}}
+            </div>
 
-</div>
+        </div>
 
-<div class="col-6 p-5">
-<h2 class="text-center">Adiós, tacos!</h2>
+        <div class="col-6 p-5">
+            <h2 class="text-center">Adiós, tacos!</h2>
 
-<div class="pt-3">
-    {{#each tacos}}
-    {{#if devoured}}
-    <p>
-        {{taco_name}}
-        <button class="change-eat" data-id="{{id}}" data-neweat="false">
-            Add to menu
-        </button>
-    </p>
-    {{/if}}
-    {{/each}}
-</div>
-</div>
+            <div class="pt-3">
+                {{#each tacos}}
+                {{#if devoured}}
+                <p>
+                    {{taco_name}}
+                    <button class="change-eat btn ml-3" data-id="{{id}}" data-neweat="false">
+                        Make it again
+                    </button>
+                </p>
+                {{/if}}
+                {{/each}}
+            </div>
+        </div>
 
-</div>
-
-<div class="text-center">
-<h2>Add a Taco</h2>
-<form class="create-form pt-3">
-
-    <div class="form-group">
-        <label for="taco">Type of taco:</label>
-        <input type="text" id="taco" name="name">
     </div>
 
-    <button type="submit">Add Taco</button>
-</form>
+<div class="row">
+    <div class="text-center col-6 p-5">
+        <h2>Custom request</h2>
+        <form class="create-form pt-3">
+
+            <div class="form-group">
+                <label for="taco">What kind of taco would you like?</label><br>
+                <input type="text" id="taco" name="name">
+            </div>
+
+            <button class="btn" type="submit">Add taco</button>
+        </form>
+    </div>
+
+    <div class="text-center col-6 p-5">
+        <h2>Full menu</h2>
+        <div class="pt-3">
+            {{#each tacos}}
+            <p>
+                {{taco_name}}
+            </p>
+            {{/each}}
+        </div>
+    </div>
 </div>
 
 </div>
