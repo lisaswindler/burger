@@ -1,5 +1,7 @@
 var express = require("express");
 
+var path = require("path");
+
 var router = express.Router();
 
 // Import the model to use its database functions.
@@ -12,9 +14,14 @@ router.get("/", function (req, res) {
             tacos: data
         };
         console.log(hbsObject);
-        res.render("index", hbsObject);
+        res.render("../views/index.handlebars", hbsObject);
+        // res.sendFile(path.join(__dirname, "../views/layouts/main.handlebars"));
     });
 });
+
+router.get("/", function(req, res) {
+    
+  });
 
 router.get("/api/tacos", function (req, res) {
     taco.selectAll(function (data) {
