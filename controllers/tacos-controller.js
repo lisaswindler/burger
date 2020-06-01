@@ -14,8 +14,7 @@ router.get("/", function (req, res) {
             tacos: data
         };
         console.log(hbsObject);
-        res.render("../views/index.handlebars", hbsObject);
-        // res.sendFile(path.join(__dirname, "../views/layouts/main.handlebars"));
+        res.render("index", hbsObject);
     });
 });
 
