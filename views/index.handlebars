@@ -8,13 +8,14 @@
         <div class="row">
             <div class="col-12 col-sm-6 py-5 grid-secondary grid-1">
                 <h2 class="text-center">Hola, tacos!</h2>
-                <div class="text pl-5 pl-sm-3 pl-md-5 px-0 pr-sm-5 pr-md-1 pt-3 row">
+                <div class="text row">
                     {{#each tacos}}
                     {{#unless devoured}}
-                    <p class="col-7 pt-1">
+                    <p class="col-8 col-sm-6 col-md-8 pt-1">
+                        <img class="taco-icons pr-2 img-fluid" src="./assets/img/taco.png">
                         {{taco_name}}
                     </p>
-                    <div class="col-5">
+                    <div class="col-4 col-sm-6 col-md-4">
                         <button class="change-eat btn ml-3 my-1" data-id="{{id}}" data-neweat="true">
                             Devour
                         </button>
@@ -26,13 +27,14 @@
 
             <div class="col-12 col-sm-6 py-5 grid-primary grid-2">
                 <h2 class="text-center">Adiós, tacos!</h2>
-                <div class="text pl-5 pl-sm-3 pl-0 pl-md-5 pt-3 row">
+                <div class="text row">
                     {{#each tacos}}
                     {{#if devoured}}
-                    <p class="col-7 pt-1">
+                    <p class="col-8 col-sm-6 col-md-8 pt-1">
+                        <img class="taco-icons pr-2 img-fluid" src="./assets/img/taco.png">
                         {{taco_name}}
                     </p>
-                    <div class="col-5">
+                    <div class="col-4 col-sm-6 col-md-4">
                         <button class="change-eat btn ml-3 my-1" data-id="{{id}}" data-neweat="false">
                             Remake
                         </button>
@@ -46,7 +48,7 @@
         <div class="row">
             <div class="col-12 col-sm-6 py-5 grid-primary grid-3">
                 <h2 class="text-center">Custom request</h2>
-                <form class="text create-form px-1 px-sm-3 pt-3">
+                <form class="text create-form">
                     <div class="form-group">
                         <p>
                             <label for="taco">What kind of taco would you like?</label><br>
@@ -59,25 +61,32 @@
                         </div>
                     </div>
                 </form>
-                {{!-- <img class="img-fluid pt-0 mt-0" src="https://cdn.pixabay.com/photo/2017/10/24/10/10/taco-2883992_1280.png"> --}}
+                <img class="image d-none d-sm-block d-xl-none" src="./assets/img/tacos_cut.png">
             </div>
 
-            <div class="col-12 col-sm-6 py-5 grid-secondary grid-4">
+            <div class="col-12 col-sm-6 grid-secondary grid-4 pt-5 pb-sm-5 pb-0">
                 <h2 class="text-center">Full menu</h2>
-                <div class="text pl-1 pl-5 pl-sm-3 pl-md-5 pt-3">
-                    {{#each tacos}}
-                    <p>
-                        {{taco_name}}
-                    </p>
-                    {{/each}}
+                <div class="text row">
+                    <div class="col-9 col-sm-8 col-lg-9 col-xl-10 my-auto">
+                        {{#each tacos}}
+                        <p><i class="bullet fa fa-angle-double-right pr-2"></i>
+                            {{taco_name}}
+                        </p>
+                        {{/each}}
+                    </div>
+                    <div class="col-3 col-sm-4 col-lg-3 col-xl-2 my-auto">
+                        <img class="img-fluid sauce-pic" src="assets/img/taco_sauce.png">
+                    </div>
                 </div>
             </div>
         </div>
+        <img class="taco2 img-fluid d-sm-none d-xl-block" src="./assets/img/tacos_cut.png">
     </section>
-    <footer class="text-center small pb-1">
-        <a href="https://lisaswindler.github.io/portfolio" target="_blank"><i class="fa fa-id-card-o"
-                aria-hidden="true"></i> Lisa's Portfolio</a> |
-        <a href="https://github.com/lisaswindler/burger" target="_blank"><i class="fa fa-github" aria-hidden="true"></i>
-            GitHub</a>
-    </footer>
+
 </div>
+<footer class="text-center small pb-1 fixed-bottom">
+    <a href="https://lisaswindler.github.io/portfolio" target="_blank"><i class="fa fa-id-card-o"
+            aria-hidden="true"></i> Lisa's Portfolio</a> |
+    <a href="https://github.com/lisaswindler/burger" target="_blank"><i class="fa fa-github" aria-hidden="true"></i>
+        GitHub</a>
+</footer>

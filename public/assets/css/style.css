@@ -2,10 +2,17 @@
     /* box-shadow: 2px 2px 5px 2px rgb(75, 75, 75); */
     /* color: #162b92 !important; */
     background-color: #daffa6 !important;
-    color: #3db827 !important;
+    color: #37b933 !important;
     font-family: 'Rammetto One', cursive;
     font-size: 14px !important;
     /* -webkit-text-stroke: 1px rgb(22, 43, 146); */
+}
+
+.text {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 a:link, a:visited, footer {
@@ -39,32 +46,6 @@ a:hover {
 }
 
 header {
-    padding-top: 70px;
-    padding-bottom: 50px;
-}
-
-.heading {
-    color: rgba(0, 172, 37, 0.7);
-    font-family: 'Rammetto One', cursive;
-    font-size: 70px;
-    -webkit-text-stroke: 1px rgb(22, 43, 146);
-}
-
-h2 {
-    color: rgb(22, 43, 146);
-    font-family: 'Kaushan Script', cursive;
-}
-
-p {
-    color: gray;
-}
-
-hr {
-    border-top: 2px solid rgb(22, 43, 146) !important;
-    width: 30%;
-}
-
-body {
     background-image: url("../img/limes.jpg");
     background-size: cover;
     position: relative;
@@ -72,9 +53,40 @@ body {
     background-attachment: fixed;
 }
 
-.container-fluid {
+hr {
+    border-top: 2px solid rgb(22, 43, 146) !important;
+    width: 30%;
+    padding: 0px;
+    position: absolute;
+    top: 140px;
+    left: 0;
+    right: 0;
+}
+
+.heading {
     background: -webkit-linear-gradient(-30deg,rgba(253, 255, 140, 0.5) 0,rgba(72, 255, 0, 0.4) 100%);
-    padding-bottom: 100px;
+    padding-top: 70px;
+    padding-bottom: 70px;
+    background-size: cover;
+    color: rgba(0, 172, 37, 0.8);
+    font-family: 'Rammetto One', cursive;
+    font-size: 70px;
+    -webkit-text-stroke: 1px rgb(22, 43, 146);
+    border-bottom: 6px dotted rgb(206, 0, 0);
+    border-top: 6px dotted rgb(206, 0, 0);
+    
+}
+
+h2 {
+    /* color: rgb(22, 43, 146); */
+    font-family: 'Kaushan Script', cursive;
+    background: -webkit-linear-gradient(rgb(255, 51, 0), rgb(10, 44, 107));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+p {
+    color: gray;
 }
 
 section {
@@ -82,8 +94,38 @@ section {
     padding-bottom: 30px;
     padding-right: 50px;
     padding-left: 50px;
-    /* background: rgba(255, 255, 255, 0.9); */
     background-color: white;
+}
+
+.image {
+    position: absolute;
+    bottom: -50px;
+    left: -120px;
+    width: 110%;
+}
+
+.sauce-pic {
+    height: auto;
+}
+@media only screen and (min-width: 1000px) {
+    .image {
+        width: 90%;
+    }
+}
+
+.taco2 {
+    width: 70%;
+    margin: auto;
+}
+
+.taco-icons {
+    width: 30%;
+}
+
+@media only screen and (max-width: 800px) {
+    .taco2 {
+        width: 100%;
+    }
 }
 
 input {
@@ -94,13 +136,13 @@ input {
     border: 1px solid rgb(131, 218, 50);
 }
 
+.bullet {
+    color: rgb(206, 0, 0);
+}
+
 footer {
-    position: absolute;
-    bottom: 0;
-    color: white;
+    border-top: 6px dotted rgb(206, 0, 0);
     word-spacing: .2em;
-    margin-left: auto;
-    margin-right: auto;
-    left: 0;
-    right: 0;
+    padding: 10px;
+    background: -webkit-linear-gradient(-30deg,rgba(253, 255, 140, 0.8) 0,rgba(119, 255, 66, 0.9) 100%);
 }
